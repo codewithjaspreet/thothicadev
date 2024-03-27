@@ -21,7 +21,7 @@ const itemList = [
   {
     itemName: "Teachers",
     redirectUrl: "/teachers",
-    icon: "/static/icons/teachers.svg",
+    icon: "/static/icons/teacher.svg",
   },
   {
     itemName: "Status",
@@ -66,7 +66,7 @@ const Sidebar = () => {
         {/* Added fixed margin from top */}
         {itemList.map((item, index) => (
           <Link key={index} href={item.redirectUrl}>
-            <div className="flex items-center space-x-2 p-3 hover:bg-gray-100 rounded-lg mt-2">
+            <div className="flex items-center space-x-2 p-3 hover: border-l-blue-500  rounded-lg mt-2">
               <Image
                 src={item.icon}
                 alt={item.itemName}
@@ -82,9 +82,17 @@ const Sidebar = () => {
       <div className="mt-8">
         {" "}
         {/* Added fixed margin from top */}
-        <button className="w-full bg-blue-500 text-white p-10 rounded-2xl hover:bg-blue-600 hover:rounded-2xl">
-          <div className="flex items-center justify-center">
-            <span className="text-sm text-white">Create Persona</span>
+        <button className="w-full bg-blue-500 text-white p-6 ml-3 rounded-2xl hover:bg-blue-600 hover:rounded-2xl">
+          <div className="flex items-center flex-col justify-center">
+            <div className=" border-white bg-white rounded-full">
+              <Image
+                src="/static/icons/add.svg"
+                alt="Create Persona"
+                width={24}
+                height={24}
+              />
+            </div>
+            <span className="text-sm mt-2 px-6  text-white">New Teacher</span>
           </div>
         </button>
       </div>
